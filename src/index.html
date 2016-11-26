@@ -4,14 +4,39 @@
     <meta charset="UTF-8">
     <title>Top trumps</title>
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/defaults.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<div id="app">
-    {{ message }}
-</div>
+<main class="card">
+    <h1 class="card__title">Audi S8 Quattro 3.0 TDI</h1>
+    <img class="card__image" src="http://c7.nrostatic.com/sites/default/files/uploaded/donald-trump-bankruptcy-lies-r.jpg">
+    <ul class="card__details">
+        <li class="card__details-item">
+            <p class="card__details-item-label">price</p>
+            <p class="card__details-item-value">10000 €</p>
+        </li>
+        <li class="card__details-item">
+            <p class="card__details-item-label">mileage</p>
+            <p class="card__details-item-value">100000 KM</p>
+        </li>
+        <li class="card__details-item">
+            <p class="card__details-item-label">registration</p>
+            <p class="card__details-item-value">1.1.2010</p>
+        </li>
+        <li class="card__details-item">
+            <p class="card__details-item-label">power</p>
+            <p class="card__details-item-value">120 kW / 140 PS</p>
+        </li>
+        <li class="card__details-item">
+            <p class="card__details-item-label">displacement</p>
+            <p class="card__details-item-value">3799 ccm</p>
+        </li>
+    </ul>
+</main>
 
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
-<script src="index.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
