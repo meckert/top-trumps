@@ -9,32 +9,22 @@
 </head>
 <body>
 
-<main class="card">
+<div class="card" id="card">
     <h1 class="card__title">Audi S8 Quattro 3.0 TDI</h1>
-    <img class="card__image" src="http://c7.nrostatic.com/sites/default/files/uploaded/donald-trump-bankruptcy-lies-r.jpg">
+    <img class="card__image" v-bind:src="img">
     <ul class="card__details">
-        <li class="card__details-item">
-            <p class="card__details-item-label">price</p>
-            <p class="card__details-item-value">10000 €</p>
-        </li>
-        <li class="card__details-item">
-            <p class="card__details-item-label">mileage</p>
-            <p class="card__details-item-value">100000 KM</p>
-        </li>
-        <li class="card__details-item">
-            <p class="card__details-item-label">registration</p>
-            <p class="card__details-item-value">1.1.2010</p>
-        </li>
-        <li class="card__details-item">
-            <p class="card__details-item-label">power</p>
-            <p class="card__details-item-value">120 kW / 140 PS</p>
-        </li>
-        <li class="card__details-item">
-            <p class="card__details-item-label">displacement</p>
-            <p class="card__details-item-value">3799 ccm</p>
+        <li v-for="item in items">
+            <label for="item" class="card__details-item">
+                <span class="card__details-item-label">{{ item.label }}</span>
+                <span class="card__details-item-value">{{ item.value }}</span>
+            </label>
+            <input type="radio" name="item" id="item" v-bind:value="item.value" class="card__details-item-input">
         </li>
     </ul>
-</main>
+    <a href="http://www.autoscout24.com" class="card__link">More details on AutoScout24</a>
+</div>
+
+<div class="card-back"></div>
 
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <script src="js/index.js"></script>

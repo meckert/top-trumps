@@ -26,7 +26,17 @@ body {
     margin-top: -6px;
 }
 
+.card__details li {
+    position: relative;
+}
+
+.card__details li:hover {
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
 .card__details-item {
+    display: block;
     overflow: auto;
     zoom: 1;
     padding: 8px;
@@ -37,16 +47,6 @@ body {
     border-bottom: none;
 }
 
-.card__details-item:last-child:hover {
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-}
-
-.card__details-item:hover {
-    background-color: #f4f4f4;
-    cursor: pointer;
-}
-
 .card__details-item-label {
     float: left;
 }
@@ -55,3 +55,26 @@ body {
     float: right;
 }
 
+.card__details-item-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card__details-item-input:hover {
+    cursor: pointer;
+}
+
+.card__details-item-input:checked ~ .card__details-item {
+    background-color: #f4f4f4;
+}
+
+.card__link {
+    display: block;
+    text-align: center;
+    border-top: 4px solid #ff7500;
+    padding: 12px;
+}
