@@ -1,0 +1,20 @@
+{
+  "name": "top-trumps",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meckert/top-trumps.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meckert/top-trumps/issues"
+  },
+  "homepage": "https://github.com/meckert/top-trumps#readme",
+  "devDependencies": {
+    "vue": "^2.1.3"
+  }
+}
