@@ -7,19 +7,22 @@
     <link rel="stylesheet" href="css/defaults.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
+
 <body>
 
 <div class="card" id="card">
     <h1 class="card__title">Audi S8 Quattro 3.0 TDI</h1>
     <img class="card__image" v-bind:src="img">
     <ul class="card__details">
-        <li v-for="item in items">
-            <label for="item" class="card__details-item">
+        <template v-for="item in items">
+            <li class="card__details-item"
+                :class="{ isSelected: item.selected }"
+                @click="toggleSelected(item)">
                 <span class="card__details-item-label">{{ item.label }}</span>
                 <span class="card__details-item-value">{{ item.value }}</span>
-            </label>
-            <input type="radio" name="item" id="item" v-bind:value="item.value" class="card__details-item-input">
-        </li>
+            </li>
+        </template>
     </ul>
     <a href="http://www.autoscout24.com" class="card__link">More details on AutoScout24</a>
 </div>
